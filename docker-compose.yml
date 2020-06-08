@@ -1,0 +1,21 @@
+version: '3'
+services:
+  omdbsearch-server:
+    container_name: omdbsearch-server
+    build:
+      context: ./omdbsearch-server
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+      - OMDB_API_URL=http://www.omdbapi.com/
+      - OMDB_API_KEY=d6c04646
+    ports:
+      - 3001:3001
+  omdbsearch-frontend:
+    container_name: omdbsearch-frontend
+    build:
+      args:
+        - REACT_APP_API_URL=http://localhost:3001
+      context: ./omdbsearch-frontend
+    ports:
+      - 8080:80

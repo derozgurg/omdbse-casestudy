@@ -1,0 +1,31 @@
+{
+  "name": "omdbsearch-server",
+  "version": "1.0.0",
+  "description": "Omdb Search Gateway server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "NODE_ENV=development nodemon --inspect app.js",
+    "test": "mocha test/*.js --exit"
+  },
+  "author": "derozgur@gmail.com",
+  "license": "",
+  "dependencies": {
+    "@rama41222/node-logger": "^1.0.1",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "memory-cache": "^0.2.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.2.1",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}
